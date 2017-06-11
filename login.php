@@ -12,9 +12,21 @@ and open the template in the editor.
     <body>
         <?php include("codigos/header.php")?>
         <?php include("codigos/nav.php")?>
-        <?php
-        // put your code here
-        ?>
+        <div class="contenedor">                    
+            <form method="post" action="loginController.php?op=1&ca=r">
+                <label for="usuario">
+                    Usuario:
+                </label>
+                <input type="text" name="usuario"/>
+                </br>
+                <label for="clave">
+                    Clave:
+                </label>
+                <input type="password" name="clave"/>
+                </br>
+                <input type="submit" value="Enviar"/>
+            </form>   
+        </div>
         <?php include("codigos/footer.php")?>
     </body>
 </html>
