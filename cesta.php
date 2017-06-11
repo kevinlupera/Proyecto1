@@ -12,9 +12,7 @@ and open the template in the editor.
     <body>
         <?php include("codigos/header.php")?>
         <?php include("codigos/nav.php")?>
-        <?php
-        // put your code here
-        ?>
+        <div class="contenedor"></div>
         <?php include("codigos/footer.php")?>
     </body>
 </html>
