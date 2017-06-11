@@ -52,10 +52,6 @@ h1{
     border-radius: 10px;
 }
 
-#login{
-    float: right;
-    margin-right: 2%;
-}
 #reportes{
     visibility: hidden;
 }
@@ -187,16 +183,15 @@ form{
 }
 
 .contenedor{
-    display: inline-block;
+    display: block;
     margin-top: 20px;
-    width: 100%;
+    width: 90%;
     height: 600px;
     box-shadow: 0px 2px 3px gray;
     margin-bottom: 0px;
     margin-right: 2%;
     margin-left: 2%;
     background: white;
-    float: center;
 }
  
 
