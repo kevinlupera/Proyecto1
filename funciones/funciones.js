@@ -73,51 +73,127 @@ function adicionarRepor(x) {
     var nodoP=document.createElement("p");
     var nodoDiv;
     var texto;
+    contador=contador+1;
     switch(x){
         case 1:
-            nodoDiv=document.getElementById("cntReporteDia");
-            texto="Producto del"+ " dia #"+(contador+1);
+            nodoDiv=document.getElementById("cntReporte"+"Dia");
+            texto="Producto del"+ " dia #"+(contador);
             break;
         case 2:
             nodoDiv=document.getElementById("cntReporte"+"Mes");
-            texto="Producto del"+ "mes #"+(contador+1);
+            texto="Producto del"+ " mes #"+(contador);
             break;
         case 3:
             nodoDiv=document.getElementById("cntReporte"+"Año");
-            texto="Producto del"+ "año #"+(contador+1);
+            texto="Producto del"+ " año #"+(contador);
             break;
         default :
             break;
     }
-    nodoDiv=document.getElementById("cntReporteDia");
     var nodoTexto=document.createTextNode(texto);
     nodoP.appendChild(nodoTexto);
     nodoDiv.appendChild(nodoP);
 }
-function aparecerRepor(){
-    var nodoDiv=document.getElementById("cntReporteDia");
-    nodoDiv.style.display = 'block';
-}
-function ocultarRepor(){
-    var nodoDiv=document.getElementById("cntReporteDia");
-    nodoDiv.style.display = 'none';
-}
-function resetRepor(){
-    var nodoDiv=document.getElementById("cntReporteDia");
-    if(nodoDiv.chieldElementCount>0){
-        for(i=0;i<1;i++){
-            nodoDiv.removeChild(nodoDiv.lastElementChild);
-        }
+function aparecerRepor(x){
+    var nodoDiv;
+    
+    switch(x){
+        case 1:
+            nodoDiv=document.getElementById("cntReporte"+"Dia");
+            nodoDiv.style.display = 'block';
+            break;
+        case 2:
+            nodoDiv=document.getElementById("cntReporte"+"Mes");
+            nodoDiv.style.display = 'block';
+            break;
+        case 3:
+            nodoDiv=document.getElementById("cntReporte"+"Año");
+            nodoDiv.style.display = 'block';
+            break;
+        default :
+            break;
     }
-    contador=0;
 }
-function quitarRepor(){
-    var nodoDiv=document.getElementById("cntReporteDia");
-    if(nodoDiv.childElementCount>0){
-        for(i=0;i<nodoDiv.childElementCount;i++){
-            nodoDiv.removeChild(nodoDiv.lastElementChild);
-        }
+function ocultarRepor(x){
+    var nodoDiv;
+    
+    switch(x){
+        case 1:
+            nodoDiv=document.getElementById("cntReporte"+"Dia");
+            nodoDiv.style.display = 'none';
+            break;
+        case 2:
+            nodoDiv=document.getElementById("cntReporte"+"Mes");
+            nodoDiv.style.display = 'none';
+            break;
+        case 3:
+            nodoDiv=document.getElementById("cntReporte"+"Año");
+            nodoDiv.style.display = 'none';
+            break;
+        default :
+            break;
     }
-    contador=0;
+}
+function resetRepor(x){
+    var nodoDiv;
+    var i=0;
+    switch(x){
+        case 1:
+            nodoDiv=document.getElementById("cntReporte"+"Dia");
+            if(nodoDiv.childElementCount=>0){
+                for(i=0;i<nodoDiv.childElementCount;i++){
+                    nodoDiv.removeChild();
+                }
+            }
+            contador=0;
+            break;
+        case 2:
+            nodoDiv=document.getElementById("cntReporte"+"Mes");
+            if(nodoDiv.childElementCount=>0){
+                for(i=0;i<nodoDiv.childElementCount;i++){
+                    nodoDiv.removeChild(nodoDiv.firstChild);
+                }
+            }
+            contador=0;
+            break;
+        case 3:
+            nodoDiv=document.getElementById("cntReporte"+"Año");
+            if(nodoDiv.childElementCount=>0){
+                for(i=0;i<nodoDiv.childElementCount;i++){
+                    nodoDiv.removeChild(nodoDiv.firstChild);
+                }
+            }
+            contador=0;
+            break;
+        default :
+            break;
+    }
+}
+function quitarRepor(x){
+    var nodoDiv;
+    if(contador > 0)
+        contador=contador-1;
+    switch(x){
+        case 1:
+            nodoDiv=document.getElementById("cntReporte"+"Dia");
+            if(nodoDiv.childElementCount>0){
+                nodoDiv.removeChild(nodoDiv.lastElementChild);
+            }
+            break;
+        case 2:
+            nodoDiv=document.getElementById("cntReporte"+"Mes");
+            if(nodoDiv.childElementCount>0){
+                nodoDiv.removeChild(nodoDiv.lastElementChild);
+            }
+            break;
+        case 3:
+            nodoDiv=document.getElementById("cntReporte"+"Año");
+            if(nodoDiv.childElementCount>0){
+                nodoDiv.removeChild(nodoDiv.lastElementChild);
+            }
+            break;
+        default :
+            break;
+    }
 }
 
