@@ -19,13 +19,13 @@ and open the template in the editor.
             <section class="uno">
                 <div class="principal">
                     <h2><i>"Consigue los mejores productos al menor costo"</i></h2>
-                    <img src="" alt=""/>
+                    <img src="imagenes/banner2.jpg" alt="Bienvenida"/>
                 </div>
             </section>
             <section class="dos">
                 <div class="secundaria">
                     <p></p>
-                    <img src="" alt=""/>
+                    <img src="imagenes/banner.jpg" alt="Banner Publicitario" width="99%" height="100%"/>
                 </div>
             </section>
         </section>
