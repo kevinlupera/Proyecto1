@@ -5,11 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <footer>
-
-    <div class="pi-pagina">
-
     <div class="pie-pagina">
-
         <div class="pie-inicio" style="float: center;">
           <h4>ALLBUY</h4>
           <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
