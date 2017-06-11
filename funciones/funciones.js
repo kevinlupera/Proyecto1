@@ -89,19 +89,20 @@ function adicionar(x) {
         default :
             break;
     }
-    var notoTexto=document.createTextNode(texto);
+    nodoDiv=document.getElementById("cntReporteDia");
+    var nodoTexto=document.createTextNode(texto);
     nodoP.appendChild(nodoTexto);
     nodoDiv.appendChild(nodoP);
 }
-function aparecerRepor(x){
+function aparecerRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
     nodoDiv.style.visibility=visible;
 }
-function ocultarRepor(x){
+function ocultarRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
     nodoDiv.style.visibility=hidden;
 }
-function resetReport(x){
+function resetReport(){
     var nodoDiv=document.getElementById("cntReporteDia");
     if(nodoDiv.chieldElementCount>0){
         for(i=0;i<1;i++){
@@ -110,7 +111,7 @@ function resetReport(x){
     }
     contador=0;
 }
-function quitarReport(x){
+function quitarReport(){
     var nodoDiv=document.getElementById("cntReporteDia");
     if(nodoDiv.chieldElementCount>0){
         for(i=0;i<nodoDiv.childElementCount;i++){
