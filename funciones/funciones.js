@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var contador=0;
 function validacionFormularioRegistro() {
-    
     var campoUsuario = document.getElementById("campoUsuario").value;
     var campoEmail = document.getElementById("campoEmail").value;
     var camposGenero = document.getElementsByName("genero");
@@ -18,9 +18,7 @@ function validacionFormularioRegistro() {
         break;
         }
     }
-    
-    
-    
+
     var emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     
     if( campoUsuario === null || campoUsuario.length === 0 || /^\s+$/.test(campoUsuario) || campoEmail === null || campoEmail.length === 0) {
@@ -71,4 +69,54 @@ function validacionFormularioRegistro() {
    
 }
 
+function adicionar(x) {
+    var nodoP=document.createElement("p");
+    var nodoDiv;
+    var texto;
+    switch(x){
+        case 1:
+            nodoDiv=document.getElementById("cntReporteDia");
+            texto="Producto del"+ "dia #"+(contador+1);
+            break;
+        case 2:
+            nodoDiv=document.getElementById("cntReporte"+"Mes");
+            texto="Producto del"+ "mes #"+(contador+1);
+            break;
+        case 3:
+            nodoDiv=document.getElementById("cntReporte"+"Año");
+            texto="Producto del"+ "año #"+(contador+1);
+            break;
+        default :
+            break;
+    }
+    var notoTexto=document.createTextNode(texto);
+    nodoP.appendChild(nodoTexto);
+    nodoDiv.appendChild(nodoP);
+}
+function aparecerRepor(x){
+    var nodoDiv=document.getElementById("cntReporteDia");
+    nodoDiv.style.visibility=visible;
+}
+function ocultarRepor(x){
+    var nodoDiv=document.getElementById("cntReporteDia");
+    nodoDiv.style.visibility=hidden;
+}
+function resetReport(x){
+    var nodoDiv=document.getElementById("cntReporteDia");
+    if(nodoDiv.chieldElementCount>0){
+        for(i=0;i<1;i++){
+            nodoDiv.removeChild(nodoDiv.lastElementChild);
+        }
+    }
+    contador=0;
+}
+function quitarReport(x){
+    var nodoDiv=document.getElementById("cntReporteDia");
+    if(nodoDiv.chieldElementCount>0){
+        for(i=0;i<nodoDiv.childElementCount;i++){
+            nodoDiv.removeChild(nodoDiv.lastElementChild);
+        }
+    }
+    contador=0;
+}
 
