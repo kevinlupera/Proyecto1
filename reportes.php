@@ -16,7 +16,7 @@ and open the template in the editor.
         <div class="contenedor">
             <section class="reporte-dia">
                 <h2>Reporte del Día</h2>
-                <a class="enlacesDOM" onmouseover="adicionar(1)" href="#">Agregar un reporte</a>
+                <button type="button" onmouseover="adicionarRepor(1)" href="#">Agregar un reporte</button>
                 </br>    
                 <button type="button" onclick="quitarRepor()">Quitar un reporte</button>
                 <button type="button" onclick="aparecerRepor()">Mostrar el reporte</button>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var contador=0;
+
 function validacionFormularioRegistro() {
     var campoUsuario = document.getElementById("campoUsuario").value;
     var campoEmail = document.getElementById("campoEmail").value;
@@ -68,15 +68,15 @@ function validacionFormularioRegistro() {
     return true; 
    
 }
-
-function adicionar(x) {
+var contador=0;
+function adicionarRepor(x) {
     var nodoP=document.createElement("p");
     var nodoDiv;
     var texto;
     switch(x){
         case 1:
             nodoDiv=document.getElementById("cntReporteDia");
-            texto="Producto del"+ "dia #"+(contador+1);
+            texto="Producto del"+ " dia #"+(contador+1);
             break;
         case 2:
             nodoDiv=document.getElementById("cntReporte"+"Mes");
@@ -96,13 +96,13 @@ function adicionar(x) {
 }
 function aparecerRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
-    nodoDiv.style.visibility=visible;
+    nodoDiv.style.display = 'block';
 }
 function ocultarRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
-    nodoDiv.style.visibility=hidden;
+    nodoDiv.style.display = 'none';
 }
-function resetReport(){
+function resetRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
     if(nodoDiv.chieldElementCount>0){
         for(i=0;i<1;i++){
@@ -111,9 +111,9 @@ function resetReport(){
     }
     contador=0;
 }
-function quitarReport(){
+function quitarRepor(){
     var nodoDiv=document.getElementById("cntReporteDia");
-    if(nodoDiv.chieldElementCount>0){
+    if(nodoDiv.childElementCount>0){
         for(i=0;i<nodoDiv.childElementCount;i++){
             nodoDiv.removeChild(nodoDiv.lastElementChild);
         }
