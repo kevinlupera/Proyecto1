@@ -25,12 +25,12 @@ body {
 h1{
     color: #007cba;
 }
-.header, .nav, h1{
+.cabecera, .barra-navegacion, h1{
     background-color: white;
     display:block;
 
 }
-.nav{
+.barra-navegacion{
     background: #007cff;
 
     margin: 0;
@@ -52,10 +52,6 @@ h1{
     border-radius: 10px;
 }
 
-#login{
-    float: right;
-    margin-right: 2%;
-}
 #reportes{
     visibility: hidden;
 }

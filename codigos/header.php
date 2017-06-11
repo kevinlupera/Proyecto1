@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <header>
-    <div class="header">
+    <div class="cabecera">
         <div class="logo">
             </br>
             <h1 class="logo"><b>ALLBUY</b></h1>

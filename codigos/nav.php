@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
         <nav>
-            <div class="nav">
+            <div class="barra-navegacion">
                 <div class="desplegar">
                 <button class="btDesplegable">Categorias</button>
                 <div class="contenDesple">
