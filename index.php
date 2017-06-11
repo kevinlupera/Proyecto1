@@ -41,13 +41,13 @@ and open the template in the editor.
                 <label for="claveUsuario">Confirmar contraseña:</label><br/>
                 <input type="password" name="claveUsuario" id="campoContrasenia2"><br/>
                 <label for="radio">Genero:</label><br/>
-                <input type="radio" name="genero" value="hombre"><label>Masculino</label><br/>
-                <input type="radio" name="genero" value="mujer"><label>Femenino</label><br/>
-                <input type="radio" name="genero" value="otro"><label>Otro</label><br/>
+                <input type="radio" name="genero" value="hombre" class="btRadio"><label>Masculino</label><br/>
+                <input type="radio" name="genero" value="mujer" class="btRadio"><label>Femenino</label><br/>
+                <input type="radio" name="genero" value="otro" class="btRadio"><label>Otro</label><br/>
                 <label for="fechaNacimiento">Fecha de Nacimiento:</label><br/>
                 <input type="date" name="fechaNacimiento" min="1930-01-01" max="2002-12-31" id="campoFechaNac"><br/>
-                <input type="submit" value="Registrar" name="botonRegistrar">
-                <input type="reset" value="Limpiar">
+                <input type="submit" value="Registrar" name="botonRegistrar" class="botonForm">
+                <input type="reset" value="Limpiar" class="botonForm">
             </form>
         </aside>
         <script src="funciones/funciones.js" type="text/javascript">

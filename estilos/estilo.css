@@ -31,8 +31,8 @@ h1{
 
 }
 .barra-navegacion{
-    background: #007cff;
-
+    background: #24292e;
+    height: 50px;
     margin: 0;
     padding-top: 5px;
 }
@@ -44,10 +44,13 @@ h1{
     cursor: pointer;
     text-decoration:none; 
 }
+
+.btDesplegable{
+    margin-left: 30px;
+}
 .item,.btDesplegable{
     border-radius: 10px;
     background-color: #007cff;
-
     text-decoration:none;   
     border-radius: 10px;
 }
@@ -63,8 +66,7 @@ h1{
 }
 #login{
     float: right;
-    padding: 13px;
-    margin-right: 0%;
+    margin-right: 2%;
     margin-bottom: 3%;
 }
 footer{
@@ -160,7 +162,6 @@ td{
     display: inline-block;
     margin-top: 20px;
     width: 74%;
-    height: 600px;
     box-shadow: 0px 2px 3px gray;
     margin-bottom: 0px;
     margin-right: 2%;
@@ -194,27 +195,49 @@ form{
     background: white;
 }
  
-
-#contenedor{
-    display: inline-block;
-    margin-top: 20px;
+#contenedor, #barraLateral{
+        margin-top: 20px;
+        display: inline-block;
+        box-shadow: 0px 2px 3px gray;
+        margin-right: 2%;
+        border-radius: 4px;
+}
+#contenedor{   
     width: 74%;
     height: 600px;
-    box-shadow: 0px 2px 3px gray;
     margin-bottom: 0px;
-    margin-right: 2%;
     margin-left: 2%;
 }
 
 #barraLateral{
-    margin-top: 20px;
-    display: inline-block;
     width: 20%;
-    box-shadow: 0px 2px 3px gray;
     position: absolute;
-    margin-right: 2%;
+    
 }
 
+#barraLateral h3{
+    text-align: center;
+}
 form{
     margin: 30px;
+}
+input{
+    width: 100%;
+}
+
+.btRadio{
+    width: 10px;
+    display: inline-block;
+}
+.botonForm{
+    margin-top: 20px;
+    padding: 8px;
+    
+    border-radius: 5px;
+    background-color: #007cff;
+    color: white;
+}
+
+.botonForm:hover{
+    background-color: #24292e;
 }
