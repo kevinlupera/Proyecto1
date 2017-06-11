@@ -68,24 +68,28 @@ function validacionFormularioRegistro() {
     return true; 
    
 }
-var contador=0;
+var contadord=0;
+var contadorm=0;
+var contadora=0;
 function adicionarRepor(x) {
     var nodoP=document.createElement("p");
     var nodoDiv;
     var texto;
-    contador=contador+1;
     switch(x){
         case 1:
+            contadord=contadord+1;
             nodoDiv=document.getElementById("cntReporte"+"Dia");
-            texto="Producto del"+ " dia #"+(contador);
+            texto="Producto del"+ " dia #"+(contadord);
             break;
         case 2:
+            contadorm=contadorm+1;
             nodoDiv=document.getElementById("cntReporte"+"Mes");
-            texto="Producto del"+ " mes #"+(contador);
+            texto="Producto del"+ " mes #"+(contadorm);
             break;
         case 3:
+            contadora=contadora+1;
             nodoDiv=document.getElementById("cntReporte"+"Año");
-            texto="Producto del"+ " año #"+(contador);
+            texto="Producto del"+ " año #"+(contadora);
             break;
         default :
             break;
@@ -140,30 +144,24 @@ function resetRepor(x){
     switch(x){
         case 1:
             nodoDiv=document.getElementById("cntReporte"+"Dia");
-            if(nodoDiv.childElementCount=>0){
-                for(i=0;i<nodoDiv.childElementCount;i++){
-                    nodoDiv.removeChild();
-                }
+            while (nodoDiv.hasChildNodes()) {   
+                nodoDiv.removeChild(nodoDiv.firstChild);
             }
-            contador=0;
+            contadord=0;
             break;
         case 2:
             nodoDiv=document.getElementById("cntReporte"+"Mes");
-            if(nodoDiv.childElementCount=>0){
-                for(i=0;i<nodoDiv.childElementCount;i++){
-                    nodoDiv.removeChild(nodoDiv.firstChild);
-                }
+            while (nodoDiv.hasChildNodes()) {   
+                nodoDiv.removeChild(nodoDiv.firstChild);
             }
-            contador=0;
+            contadorm=0;
             break;
         case 3:
             nodoDiv=document.getElementById("cntReporte"+"Año");
-            if(nodoDiv.childElementCount=>0){
-                for(i=0;i<nodoDiv.childElementCount;i++){
-                    nodoDiv.removeChild(nodoDiv.firstChild);
-                }
+            while (nodoDiv.hasChildNodes()) {   
+                nodoDiv.removeChild(nodoDiv.firstChild);
             }
-            contador=0;
+            contadora=0;
             break;
         default :
             break;
@@ -171,22 +169,26 @@ function resetRepor(x){
 }
 function quitarRepor(x){
     var nodoDiv;
-    if(contador > 0)
-        contador=contador-1;
     switch(x){
         case 1:
+            if(contadord > 0)
+                contadord=contadord-1;
             nodoDiv=document.getElementById("cntReporte"+"Dia");
             if(nodoDiv.childElementCount>0){
                 nodoDiv.removeChild(nodoDiv.lastElementChild);
             }
             break;
         case 2:
+            if(contadorm > 0)
+                contadorm=contadorm-1;
             nodoDiv=document.getElementById("cntReporte"+"Mes");
             if(nodoDiv.childElementCount>0){
                 nodoDiv.removeChild(nodoDiv.lastElementChild);
             }
             break;
         case 3:
+            if(contadora > 0)
+                contadora=contadora-1;
             nodoDiv=document.getElementById("cntReporte"+"Año");
             if(nodoDiv.childElementCount>0){
                 nodoDiv.removeChild(nodoDiv.lastElementChild);
