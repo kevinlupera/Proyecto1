@@ -33,7 +33,9 @@ and open the template in the editor.
             <h3>Registrate</h3>
             <form method="post" action="" onsubmit="return validacionFormularioRegistro()">
                 <label for="nombreUsuario">Nombre de usuario:</label><br/>
-                <input type="text" name="nombreUsuario" id="campoUsuario"/><br/>
+                <input type="text" name="nombreUsuario" id="campoUsuario" onKeypress="validaLetrasNumeros()"/><br/>
+                <label for="cedulaUsuario">Cedula de usuario:</label><br/>
+                <input type="text" name="cedulaUsuario" id="campoCedula" maxlength="10" onKeypress="validaSoloNumeros()" /><br/>
                 <label for="correo"> E-mail:</label><br/>
                 <input type="email" name="correo" id="campoEmail"><br/>
                 <label for="claveUsuario">Contraseña de usuario:</label><br/>

@@ -3,7 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+//Función que permite solo Números
+function validaSoloNumeros() {
+ if ((event.keyCode < 48) || (event.keyCode > 57)) 
+  event.returnValue = false;
+}
+function validaSoloLetras() {
+ if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122))
+    event.returnValue = false;
+}
+function validaLetrasNumeros() {
+{
+    if (event.keyCode < 65 && event.keyCode > 90){
+        //los numeros son codigos ASCII
+        event.returnValue = false;
+    }
+}
 function validacionFormularioRegistro() {
     var campoUsuario = document.getElementById("campoUsuario").value;
     var campoEmail = document.getElementById("campoEmail").value;
@@ -11,6 +26,7 @@ function validacionFormularioRegistro() {
     var campoContrasenia = document.getElementById("campoContrasenia").value;
     var campoContrasenia2 = document.getElementById("campoContrasenia2").value;
     var campoFechaNac= document.getElementById("campoFechaNac").value;
+    var campoCedula= document.getElementById("campoCedula").value;
     var seleccionado = false;
     for(var i=0; i<camposGenero.length; i++) {    
         if(camposGenero[i].checked) {
@@ -37,14 +53,14 @@ function validacionFormularioRegistro() {
     }
     var espacios = false;
     var cont = 0;
-    
+    var tamCedula=10;
     
     while (!espacios && (cont < campoContrasenia.length)) {
         if (campoContrasenia.charAt(cont) === " ")
             espacios = true;
         cont++;
     }
- 
+    
     if (espacios) {
         alert ("La contraseña no puede contener espacios en blanco");
     return false;
@@ -61,10 +77,14 @@ function validacionFormularioRegistro() {
     }
     
     if (campoContrasenia.length < 8 || campoContrasenia2.length < 8){
-        alert("La contrasena debe ser tener almenos 8 caracteres");
+        alert("La contrasena debe ser tener al menos 8 caracteres");
         return false;
     }
-   
+    if(campoCedula.length < 10){
+        alert("La cedula tiene 10 numeros");
+        return false;
+    }
+        
     return true; 
    
 }
@@ -198,4 +218,3 @@ function quitarRepor(x){
             break;
     }
 }
-
