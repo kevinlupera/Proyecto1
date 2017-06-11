@@ -9,6 +9,9 @@ and open the template in the editor.
 */
 
 /*selector universal*/
+*{
+    
+}
 .logo{
     text-align: center;
 }
@@ -55,7 +58,7 @@ h1{
     border-radius: 10px;
 }
 
-#reportes{
+/*#reportes{
     visibility: hidden;
 }
 #facturacion{
@@ -63,7 +66,7 @@ h1{
 }
 #usuarios{
     visibility: hidden;
-}
+}*/
 #login{
     float: right;
     margin-right: 2%;
@@ -151,9 +154,19 @@ div.pie-fin{
     background: lightsteelblue;
 }
 .contenedorProductos{
-    display: flex;
+    display: block;
     justify-content: center;
-    align-items: center;
+    border-radius: 4px;
+    height: auto;
+    align-content: center;
+    margin-left: 2%;
+    width: 74%;
+    box-shadow: 0px 2px 3px gray;
+    margin-bottom: 0px;
+    margin-right: 10%;
+    margin-left: 10%;
+    background: white;
+
 }
 td{
     width: 350px;
@@ -202,12 +215,7 @@ form{
         margin-right: 2%;
         border-radius: 4px;
 }
-#contenedor{   
-    width: 74%;
-    height: 600px;
-    margin-bottom: 0px;
-    margin-left: 2%;
-}
+
 
 #barraLateral{
     width: 20%;
@@ -240,4 +248,7 @@ input{
 
 .botonForm:hover{
     background-color: #24292e;
+}
+.enlacesDOM{
+    text-decoration: underline;
 }

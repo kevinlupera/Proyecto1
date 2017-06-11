@@ -50,9 +50,7 @@ and open the template in the editor.
                 <input type="reset" value="Limpiar" class="botonForm">
             </form>
         </aside>
-        <script src="funciones/funciones.js" type="text/javascript">
-            
-        </script>
+        <?php include("codigos/funciones.php")?>
         <?php include("codigos/footer.php")?>
     </body>
 </html>
