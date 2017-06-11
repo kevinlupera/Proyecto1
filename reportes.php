@@ -14,13 +14,13 @@ and open the template in the editor.
         <?php include("codigos/nav.php")?>
         <div class="contenedor">
             <section class="reporte-dia">
-                <p>Reporte del Día</p>
+                <h2>Reporte del Día</p>
             </section>
             <section class="reporte-mensual">
-                <p>Reporte del Mensual</p>
+                <h2>Reporte del Mensual</p>
             </section>
             <section class="reporte-anual">
-                <p>Reporte del Anual</p>
+                <h3>Reporte del Anual</p>
             </section>
         </div>
         <?php include("codigos/footer.php")?>
