@@ -12,6 +12,7 @@ and open the template in the editor.
                   <a href="#">BOARDS</a>
                   <a href="#">SHIELDS</a>
                   <a href="#">SENSORS</a>
+                  
                 </div>
               </div>
                 <a id="inicio" href="index.php" class="item">Inicio</a>
